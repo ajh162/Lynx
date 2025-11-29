@@ -4,7 +4,8 @@ function UserMenu({ onLogout }) {
 
   const menuItems = [
     { label: 'Mi Perfil', icon: 'user', action: () => setShowProfile(true) },
-    { label: 'Configuración', icon: 'settings', action: () => window.location.hash = 'settings' },
+    // CORRECCIÓN: Usar globalThis en lugar de window
+    { label: 'Configuración', icon: 'settings', action: () => globalThis.location.hash = 'settings' },
     { label: 'Notificaciones', icon: 'bell', action: () => {} },
     { label: 'Ayuda', icon: 'help-circle', action: () => {} },
     { label: 'Cerrar Sesión', icon: 'log-out', action: onLogout }
@@ -30,7 +31,7 @@ function UserMenu({ onLogout }) {
         <div className="user-menu glass-effect mt-2 rounded-lg overflow-hidden">
           {menuItems.map((item) => (
             <button
-              key={item.label} // CORRECCIÓN: Usamos item.label en lugar de index
+              key={item.label}
               onClick={() => {
                 item.action();
                 setIsOpen(false);
@@ -56,7 +57,6 @@ function UserMenu({ onLogout }) {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                {/* CORRECCIÓN: Label conectado al input */}
                 <label htmlFor="profile-email" className="block text-sm font-medium text-gray-700">Email</label>
                 <input 
                   id="profile-email"
@@ -67,7 +67,6 @@ function UserMenu({ onLogout }) {
                 />
               </div>
               <div>
-                {/* CORRECCIÓN: Label conectado al input */}
                 <label htmlFor="profile-phone" className="block text-sm font-medium text-gray-700">Teléfono</label>
                 <input 
                   id="profile-phone"
