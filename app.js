@@ -105,7 +105,7 @@ function App() {
     if (loading) {
       return (
         <div className="min-h-screen flex items-center justify-center">
-          <div className="spinner-border text-primary" role="status"></div>
+          <output className="spinner-border text-primary"></output>
         </div>
       );
     }
