@@ -108,42 +108,40 @@ body {
 }
 
 
-/* Colores de kpip's */
+/* --- CORRECCIONES DE CONTRASTE AQUÍ ABAJO --- */
 
 .bg-azul-oscuro {
   background-color: #0D1E4C;
-  color: white;
+  color: white; /* Fondo oscuro, texto blanco OK */
   font-weight: bold;
 }
 
 .bg-rosa-viejo {
   background-color: #C48C83;
-  color: white;
+  color: #0D1E4C; /* CORREGIDO: Texto oscuro para fondo medio */
   font-weight: bold;
 }
 
 .bg-rosa-claro {
-  background-color: #E5C9D7; /* corregí el hex */
-  color: white;
+  background-color: #E5C9D7;
+  color: #0D1E4C; /* CORREGIDO: Texto oscuro para fondo claro */
   font-weight: bold;
 }
 
 .bg-azul-cielo {
   background-color: #83A6CE;
-  color: white;
+  color: #0D1E4C; /* CORREGIDO: Texto oscuro para fondo claro */
   font-weight: bold;
 }
 
 .bg-azul-grisaceo {
   background-color: #26415E;
-  color: white;
+  color: white; /* Fondo oscuro, texto blanco OK */
   font-weight: bold;
 }
 
 .bg-azul-profundo {
   background-color: #0B1B32;
-  color: white;
+  color: white; /* Fondo muy oscuro, texto blanco OK */
   font-weight: bold;
 }
-
-
