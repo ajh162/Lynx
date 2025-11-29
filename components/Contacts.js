@@ -11,7 +11,6 @@ function Contacts() {
     ]);
     const [showModal, setShowModal] = React.useState(false);
     const [editingContact, setEditingContact] = React.useState(null);
-    const [viewingContact, setViewingContact] = React.useState(null);
     const [filters, setFilters] = React.useState({
       category: 'Todas las categorías',
       name: '',
